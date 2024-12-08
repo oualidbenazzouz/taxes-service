@@ -1,4 +1,4 @@
-package com.oualid.benazzouz.sales_taxes_service;
+package com.oualid.benazzouz.salestaxesservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

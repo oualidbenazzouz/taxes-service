@@ -1,4 +1,4 @@
-package com.oualid.benazzouz.sales_taxes_service;
+package com.oualid.benazzouz.salestaxesservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
