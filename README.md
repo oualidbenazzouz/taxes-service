@@ -106,7 +106,7 @@ This service exposes the following API endpoint:
 ```  
 
 ### Postman Collection
-- A Postman collection for testing the API endpoints is available [here](postman/sales-taxes-service-collection.json).
+- A Postman collection for testing the API endpoints is available [here](postman/).
 
 ## Running Tests
 
