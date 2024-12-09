@@ -6,8 +6,8 @@ public class ItemInDTO {
 
     private String name;
     private BigDecimal price;
-    private boolean isExempt;
-    private boolean isImported;
+    private boolean exempt;
+    private boolean imported;
 
     public ItemInDTO() {
     }
@@ -15,8 +15,8 @@ public class ItemInDTO {
     public ItemInDTO(String itemName, BigDecimal itemPrice, boolean isExempt, boolean isImported) {
         this.name = itemName;
         this.price = itemPrice;
-        this.isExempt = isExempt;
-        this.isImported = isImported;
+        this.exempt = isExempt;
+        this.imported = isImported;
     }
 
     public String getName() {
@@ -36,19 +36,19 @@ public class ItemInDTO {
     }
 
     public boolean isExempt() {
-        return isExempt;
+        return exempt;
     }
 
     public void setExempt(boolean exempt) {
-        isExempt = exempt;
+        this.exempt = exempt;
     }
 
     public boolean isImported() {
-        return isImported;
+        return imported;
     }
 
     public void setImported(boolean imported) {
-        isImported = imported;
+        this.imported = imported;
     }
 
     @Override
@@ -56,8 +56,8 @@ public class ItemInDTO {
         return "ItemDTO{" +
                 "itemName='" + name + '\'' +
                 ", itemPrice=" + price +
-                ", isExempt=" + isExempt +
-                ", isImported=" + isImported +
+                ", isExempt=" + exempt +
+                ", isImported=" + imported +
                 '}';
     }
 }

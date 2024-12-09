@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "3f2ef912-5f52-40ca-b5fa-e535d762f774",
+		"name": "Invoice Calculation API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9018733",
+		"_collection_link": "https://team13-0014.postman.co/workspace/Team1-Workspace~85f494f4-2cca-43e2-ac8d-02ef904e06fa/collection/9018733-3f2ef912-5f52-40ca-b5fa-e535d762f774?action=share&source=collection_link&creator=9018733"
+	},
+	"item": [
+		{
+			"name": "CalculateInvoiceEmptyList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/invoice/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"invoice",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CalculateInvoiceNegativePrice",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    { \"name\": \"Book\", \"price\": -12.49, \"isExempt\": true, \"isImported\": false }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/invoice/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"invoice",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CalculateInvoiceInput1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    { \"name\": \"Book\", \"price\": 12.49, \"exempt\": true, \"imported\": false},\r\n    { \"name\": \"Music CD\", \"price\": 14.99, \"exempt\": false, \"imported\": false},\r\n    { \"name\": \"Chocolate bar\", \"price\": 0.85, \"exempt\": true, \"imported\": false}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/invoice/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"invoice",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CalculateInvoiceInput2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    { \"name\": \"imported box of chocolates\", \"price\": 10.00, \"exempt\": true, \"imported\": true},\r\n    { \"name\": \"imported bottle of perfume\", \"price\": 47.50, \"exempt\": false, \"imported\": true}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/invoice/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"invoice",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CalculateInvoiceInput3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    { \"name\": \"imported bottle of perfume\", \"price\": 27.99, \"exempt\": false, \"imported\": true},\r\n    { \"name\": \"bottle of perfume\", \"price\": 18.99, \"exempt\": false, \"imported\": false},\r\n    { \"name\": \"packet of headache pills\", \"price\": 9.75, \"exempt\": true, \"imported\": false},\r\n    { \"name\": \"box of imported chocolates\", \"price\": 11.25, \"exempt\": true, \"imported\": true}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/invoice/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"invoice",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

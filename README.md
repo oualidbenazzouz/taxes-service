@@ -50,8 +50,8 @@ This service exposes the following API endpoint:
   {
     "name": "string",
     "price": 0.0,
-    "isExempt": true,
-    "isImported": false
+    "exempt": true,
+    "imported": false
   }
 ]
 ```
@@ -76,14 +76,14 @@ This service exposes the following API endpoint:
   {
     "name": "Book",
     "price": 12.49,
-    "isExempt": true,
-    "isImported": false
+    "exempt": true,
+    "imported": false
   },
   {
     "name": "Music CD",
     "price": 14.99,
-    "isExempt": false,
-    "isImported": false
+    "exempt": false,
+    "imported": false
   }
 ]
 ```
@@ -105,6 +105,8 @@ This service exposes the following API endpoint:
 }
 ```  
 
+### Postman Collection
+- A Postman collection for testing the API endpoints is available [here](postman/sales-taxes-service-collection.json).
 
 ## Running Tests
 
