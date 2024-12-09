@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.oualid.benazzouz</groupId>
 	<artifactId>sales-taxes-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>sales-taxes-service</name>
 	<description>Service responsible for calculating and managing sales taxes</description>
 	<url/>
