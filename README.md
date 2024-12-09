@@ -39,13 +39,71 @@ The **Taxes Service** is a Spring Boot application designed to calculate the tot
 
 ## API Documentation
 
-The API documentation for this service is available through Swagger UI. Swagger provides an interactive interface to explore and test the API endpoints.
-    - **Swagger UI URL**: [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
+This service exposes the following API endpoint:
 
-    Steps to view the API documentation:
-    1. Start the application by running it locally.
-    2. Open your web browser and navigate to the provided Swagger UI URL.
-    3. Explore the available API endpoints and their request/response structure.
+- Endpoint: /api/v1/invoice/calculate
+- Method: POST
+- Description: Calculates the total taxes and total price for a list of items.
+- Request Body: A JSON array of items, each with the following structure:
+```json
+[
+  {
+    "name": "string",
+    "price": 0.0,
+    "isExempt": true,
+    "isImported": false
+  }
+]
+```
+- Response:
+```json
+{
+  "purchasedItems": [
+    {
+      "name": "string",
+      "price": 0.0
+    }
+  ],
+  "totalTaxes": 0.0,
+  "totalPrice": 0.0
+}
+```
+
+- **Example**:
+- Request :
+```json
+[
+  {
+    "name": "Book",
+    "price": 12.49,
+    "isExempt": true,
+    "isImported": false
+  },
+  {
+    "name": "Music CD",
+    "price": 14.99,
+    "isExempt": false,
+    "isImported": false
+  }
+]
+```
+- Response :
+```json
+{
+  "purchasedItems": [
+    {
+      "name": "Book",
+      "price": 12.49
+    },
+    {
+      "name": "Music CD",
+      "price": 16.49
+    }
+  ],
+  "totalTaxes": 1.50,
+  "totalPrice": 28.98
+}
+```  
 
 
 ## Running Tests
@@ -74,7 +132,6 @@ Check test reports generated in the terminal after execution for more details.
 - **Java 17**
 - **Spring Boot**
 - **Maven**
-- **Swagger**
 - **JUnit 5**
 
 ## Author:
