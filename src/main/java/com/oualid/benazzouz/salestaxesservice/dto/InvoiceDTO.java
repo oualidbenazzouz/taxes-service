@@ -5,24 +5,24 @@ import java.util.List;
 
 public class InvoiceDTO {
 
-    private List<ItemDTO> purchasedItems;
+    private List<ItemOutDTO> purchasedItems;
     private BigDecimal totalTaxes;
     private BigDecimal totalPrice;
 
     public InvoiceDTO() {
     }
 
-    public InvoiceDTO(List<ItemDTO> items, BigDecimal totalTaxes, BigDecimal totalPrice) {
+    public InvoiceDTO(List<ItemOutDTO> items, BigDecimal totalTaxes, BigDecimal totalPrice) {
         this.purchasedItems = items;
         this.totalTaxes = totalTaxes;
         this.totalPrice = totalPrice;
     }
 
-    public List<ItemDTO> getPurchasedItems() {
+    public List<ItemOutDTO> getPurchasedItems() {
         return purchasedItems;
     }
 
-    public void setPurchasedItems(List<ItemDTO> purchasedItems) {
+    public void setPurchasedItems(List<ItemOutDTO> purchasedItems) {
         this.purchasedItems = purchasedItems;
     }
 

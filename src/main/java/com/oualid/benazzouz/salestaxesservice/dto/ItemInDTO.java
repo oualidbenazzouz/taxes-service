@@ -2,17 +2,17 @@ package com.oualid.benazzouz.salestaxesservice.dto;
 
 import java.math.BigDecimal;
 
-public class ItemDTO {
+public class ItemInDTO {
 
     private String name;
     private BigDecimal price;
     private boolean isExempt;
     private boolean isImported;
 
-    public ItemDTO() {
+    public ItemInDTO() {
     }
 
-    public ItemDTO(String itemName, BigDecimal itemPrice, boolean isExempt, boolean isImported) {
+    public ItemInDTO(String itemName, BigDecimal itemPrice, boolean isExempt, boolean isImported) {
         this.name = itemName;
         this.price = itemPrice;
         this.isExempt = isExempt;
